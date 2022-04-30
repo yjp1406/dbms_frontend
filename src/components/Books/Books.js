@@ -29,7 +29,7 @@ function Books() {
           <th scope="col">authors</th>
           <th scope="col">language</th>
           <th scope="col">publisher_id</th>
-          <th scope="col">copies</th>
+          {/* <th scope="col">copies</th> */}
         </tr>
       </thead>
       {books.map((el,key) => {
@@ -44,7 +44,7 @@ function Books() {
             <td>{el.authors}</td>
             <td>{el.language}</td>
             <td>{el.publisher_id}</td>
-            <td>{el.copies}</td>
+            {/* <td>{el.copies}</td> */}
           </tr>
         );
       })}
