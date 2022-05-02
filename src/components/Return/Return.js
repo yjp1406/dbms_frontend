@@ -1,56 +1,52 @@
 import React from 'react';
 import './Return.css';
 
-function Books() {
-    const [books, setBooks] = useState([]);
-  
-    useEffect(() => {
-      fetch("http://localhost:8000/readers/all")
-        .then((res) => res.json())
-        .then((data) => {
-          setBooks(data);
-        });
-    }, []);
-  
-    return (
-      <div id='books'>
-      <span id="heading">Users</span>
-      <table id="results" className="table text-center table-hover">
-        <thead id="header">
-          <tr>
-            <th scope="col">book_id</th>
-            <th scope="col">isbn</th>
-            <th scope="col">title</th>
-            <th scope="col">price</th>
-            <th scope="col">genre</th>
-            <th scope="col">edition</th>
-            <th scope="col">authors</th>
-            <th scope="col">language</th>
-            <th scope="col">publisher_id</th>
-            <th scope="col">copies</th>
-          </tr>
-        </thead>
-        {books.map((el,key) => {
-          return (
-            <tr key={key}>
-              <td>{el.book_id}</td>
-              <td>{el.isbn}</td>
-              <td>{el.title}</td>
-              <td>{el.price}</td>
-              <td>{el.genre}</td>
-              <td>{el.edition}</td>
-              <td>{el.authors}</td>
-              <td>{el.language}</td>
-              <td>{el.publisher_id}</td>
-              <td>{el.copies}</td>
-            </tr>
-          );
-        })}
-        {console.log(books)}
-      </table>
-      </div>
-    );
+
+class Search extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      searchData:null
+    }
   }
+    search(key)
+    {
+      console.warn(key)
+      fetch('http://localhost:8000/books/search/'+key).then((data)=>{
+        data.json().then((resp)=>{
+          console.warn("resp",resp)
+          this.setState({searchData:resp});
+        
+      })
+    })
+  }
+  
+  
+
+    render(){
+
+      return (
+        <div>
+          <h1>Books Search</h1>
+          <input type='text' onChange={(event)=>{this.search(event.target.value)}}/>
+          <div>{
+            this.state.searchData?
+            <div>
+                {
+                  this.state.searchData.map((book)=>
+                    <div>{book.title}</div>
+                  )
+                }
+            </div>
+            :""
+          }
+          </div>
+        </div>
+      );
+    }  
+}
+export default Search;
+
 
 // class Return extends React.Component {
     
@@ -131,4 +127,3 @@ function Books() {
 
 // }
 
-export default Return;

@@ -110,39 +110,39 @@ function Books() {
 //         name: ''
 //     };
 
-//     fetchData = () => {
-//         var id = document.getElementById('id').value;
-//         this.setState({header: <thead id="header">
-//                         <tr>
-//                             <th scope="col">book_id</th>
-//                             <th scope="col">title</th>
-//                             <th scope="col">language</th>
-//                         </tr>
-//                     </thead>,
-//             books: []});
+    // fetchData = () => {
+    //     var id = document.getElementById('id').value;
+    //     this.setState({header: <thead id="header">
+    //                     <tr>
+    //                         <th scope="col">book_id</th>
+    //                         <th scope="col">title</th>
+    //                         <th scope="col">language</th>
+    //                     </tr>
+    //                 </thead>,
+    //         books: []});
 
-//         fetch(`/search/:title`)
-//             .then(res => res.json())
-//             .then(student => {
-//                 if(student.length > 0) {
-//                     this.setState({...this.state, name: `Following Students Issued This Book`});
-//                     student.forEach(
-//                         (el,key) => this.setState({
-//                             books: [...this.state.books, 
-//                                     <tr key={key}>
-//                                         <td>{el.id}</td>
-//                                         <td>{el.name}</td>
-//                                         <td>{el.language}</td>
-//                                     </tr>]
-//                         }))
+    //     fetch(`/search/:title`)
+    //         .then(res => res.json())
+    //         .then(student => {
+    //             if(student.length > 0) {
+    //                 this.setState({...this.state, name: `Following Students Issued This Book`});
+    //                 student.forEach(
+    //                     (el,key) => this.setState({
+    //                         books: [...this.state.books, 
+    //                                 <tr key={key}>
+    //                                     <td>{el.id}</td>
+    //                                     <td>{el.name}</td>
+    //                                     <td>{el.language}</td>
+    //                                 </tr>]
+    //                     }))
                         
-//                 }
-//                 else{
-//                     this.setState({header: []});
-//                     this.setState({...this.state, name: "No One Have Issued This Book"});
-//                 }
-//                 });
-//     }
+    //             }
+    //             else{
+    //                 this.setState({header: []});
+    //                 this.setState({...this.state, name: "No One Have Issued This Book"});
+    //             }
+    //             });
+    // }
  
 //     returnIt = el => {
 //         fetch('/search/:title', {
