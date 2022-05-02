@@ -16,7 +16,7 @@ function Books() {
 
   return (
     <div id='books'>
-    <span id="heading">AVAILABLE BOOKS</span>
+    <span id="heading">New Arrivals</span>
     <table id="results" className="table text-center table-hover">
       <thead id="header">
         <tr>
