@@ -1,6 +1,6 @@
 #books {
     margin: auto;
-    text-align: center;
+    
 }
 
 #sel {
@@ -9,10 +9,10 @@
 }
 
 #results {
-    margin: 25px auto;
-    width: 60%;
+    margin: 60px;
+    width: 70%;
     border-radius: 8px;
-    background-color: rgb(111, 167, 219);
+    background-color: white;
 }
 
 .table td {
@@ -20,6 +20,13 @@
 }
 
 #heading {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Helvetica, sans-serif;
+
     font-size: 1.5em;
+    
+}
+
+.headings__aling {
+    padding-left: 60px;
+    padding-top: 40px;
 }

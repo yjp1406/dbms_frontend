@@ -12,3 +12,23 @@
 .table td {
     vertical-align: middle;
 }
+
+.search__form {
+    padding-left: 60px;
+    padding-top: 60px;
+}
+
+.search__heading {
+    padding-bottom: 30px;
+}
+
+
+
+.input {
+    width: 900px;
+}
+
+.headings__aling {
+    padding-left: 60px;
+    padding-top: 40px;
+}

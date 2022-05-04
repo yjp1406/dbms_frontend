@@ -1,16 +1,13 @@
-#books {
-    margin: auto;
-    text-align: center;
-}
+
 
 #sel {
     width: 35%;
-    margin: 10px auto;
+    margin: 10px;
 }
 
 #results {
-    margin: 25px auto;
-    width: 60%;
+    margin: 10px;
+    width: 70%;
     border-radius: 8px;
     background-color: rgb(111, 167, 219);
 }
@@ -20,6 +17,16 @@
 }
 
 #heading {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Helvetica, sans-serif;
     font-size: 1.5em;
+    
+}
+
+#header {
+    font-size: 0.85rem;
+}
+
+.headings__aling {
+    padding-left: 60px;
+    padding-top: 40px;
 }
